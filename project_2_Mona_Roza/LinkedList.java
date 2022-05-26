@@ -163,49 +163,50 @@ public class LinkedList {
     // siralandigi bir bagli liste dondurur.
 
     public static LinkedList MergeSortedLists(LinkedList m, LinkedList n) {
-            Node headNode = m.head;
-            int counter=0;
-            while (headNode != null){
-                counter++;
-                headNode= headNode.next;
-            }
-            headNode= n.head;
-            while (headNode != null){
-                counter++;
-                headNode= headNode.next;
-            }
-            
-            
-            int[] listtoarray = new int[counter+1];
-            int i=1,j=0;
-            headNode = m.head;
-            
-                while (headNode != null){
-                    listtoarray[j]=headNode.value;
-                    headNode= headNode.next;
-                    j++;
-                }
-                headNode=n.head;
-                while (headNode != null){
-                    listtoarray[j]=headNode.value;
-                    headNode= headNode.next;
-                    j++;
-                }
+        Node headNode = m.head;
+        int counter=0;
+        while (headNode != null){
+            counter++;
+            headNode= headNode.next;
+        }
+        headNode= n.head;
+        while (headNode != null){
+            counter++;
+            headNode= headNode.next;
+        }
         
-            // iki liste de 1 arrayde birleştirildi
-            //Bubble sort algoritması ile elemanlarımızı sıralayalım.
-            int temp=0;
-            for (int k = 0; k < listtoarray.length - 1; k++) {
-                for (int y = 0; y < listtoarray.length - 1; y++) {
-                    if (listtoarray[y] > listtoarray[y + 1]) {
-                        temp = listtoarray[y];
-                        listtoarray[y] = listtoarray[y + 1];
-                        listtoarray[y + 1] = temp;
-                    }
+        
+        int[] listtoarray = new int[counter];
+        int i=1,j=0;
+        headNode = m.head;
+        
+            while (headNode != null){
+                listtoarray[j]=headNode.value;
+                headNode= headNode.next;
+           
+                j++;
+            }
+            headNode=n.head;
+            while (headNode != null){
+                listtoarray[j]=headNode.value;
+                headNode= headNode.next;
+               
+                j++;
+            }
+            
+        // iki liste de 1 arrayde birleştirildi
+        //Bubble sort algoritması ile elemanlarımızı sıralayalım.
+        int temp=0;
+        for (int k = 0; k < listtoarray.length - 1; k++) {
+            for (int y = 0; y < listtoarray.length - 1; y++) {
+                if (listtoarray[y] > listtoarray[y + 1]) {
+                    temp = listtoarray[y];
+                    listtoarray[y] = listtoarray[y + 1];
+                    listtoarray[y + 1] = temp;
                 }
             }
-           LinkedList list = new LinkedList(listtoarray);
-           return list;
-      
-    }
+        }
+        LinkedList list = new LinkedList(listtoarray);
+       return list;
+}
 }

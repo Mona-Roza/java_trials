@@ -20,9 +20,9 @@ public class Main {
         int[] num2 = {-1, 4,8,10,11,15,19};
         LinkedList a = new LinkedList(num1);
         LinkedList b = new LinkedList(num2);
-        // a.Print();
+        a.Print();
         // System.out.println(a.IsSorted() + " isSorted");
-        // b.Print();
+        b.Print();
         // System.out.println(b.IsSorted() + " isSorted");
 
         LinkedList c = LinkedList.MergeSortedLists(a,b);
