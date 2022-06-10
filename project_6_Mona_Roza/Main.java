@@ -26,21 +26,21 @@ public class Main {
         tree3.insert(generateStudents());
         tree4.insert(generateStudents());
 
-        // System.out.println("Printing tree1 object:");
-        // System.out.println();
-        // tree1.printOrderedStudentsTable();
+        System.out.println("Printing tree1 object:");
+        System.out.println();
+        tree1.printOrderedStudentsTable();
 
-        // System.out.println("Printing tree2 object:");
-        // System.out.println();
-        // tree2.printOrderedStudentsTable();
+        System.out.println("Printing tree2 object:");
+        System.out.println();
+        tree2.printOrderedStudentsTable();
 
-        // System.out.println("Printing tree3 object:");
-        // System.out.println();
-        // tree3.printOrderedStudentsTable();
+        System.out.println("Printing tree3 object:");
+        System.out.println();
+        tree3.printOrderedStudentsTable();
 
         System.out.println("Printing tree4 object:");
         System.out.println();
-        tree4.PrintInOrder();
+        tree4.printOrderedStudentsTable();
 
         // Asagidaki yorum satirina cevrilmis kodlar olusturdugumuz her bir agac objesi
         // icin o agaci temsil eden resim dosyasi olusturmaktadir. Bu kodlarin
